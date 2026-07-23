@@ -1,8 +1,32 @@
 aid: adknowledge
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/adknowledge.png
 name: AdKnowledge
-description: 'AdKnowledge is a company surfaced as a portfolio company of kleiner-perkins and added to
-  the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Adknowledge, Inc. was a performance-based digital advertising and marketing technology
+  holding company founded in 2004 by Scott Lynn and headquartered in Kansas City, Missouri. It ran a
+  response-based targeting marketplace that connected advertisers to consumers across email, search,
+  domains, social and app inventory, and it exposed a publisher-facing AdStation platform with an
+  automated offer engine and creative library. Ben Legg served as Group CEO from 2011 to 2016, during
+  which the company consolidated a long acquisition run (Super Rewards, Miva, Cubics, Lookery, Hydra
+  Group, AdParlor, Giant Media, TriVu Media and others) into video and social units that were then
+  sold off; AdParlor was subsequently acquired by Fluent in 2019. Third-party company registries now
+  list Adknowledge as out of business. It entered the API Evangelist network as a portfolio-lead stub
+  via kleiner-perkins. Contemporary integration write-ups confirm a historical RESTful AdStation /
+  Publisher Platform API, but as of this enrichment pass no live surface survives: the adknowledge.com
+  zone is still registered (AWS Route 53 nameservers, Microsoft 365 mail with an SPF record) yet
+  publishes no A record for the apex or for www, api, developer, developers, docs or publisher, so
+  there is no reachable website, developer portal, API documentation or machine-readable specification
+  from which to harvest provider artifacts.'
 url: https://raw.githubusercontent.com/api-evangelist/adknowledge/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,15 +34,52 @@ x-backed-by:
 - kleiner-perkins
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: defunct
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+x-enrichment-status: 'no-live-surface: company out of business; adknowledge.com apex/www/api/developer/docs
+  all NXDOMAIN (no A record) as of 2026-07-20; zone still registered on AWS Route 53 with Microsoft 365
+  MX + SPF but no web host; no developer portal, docs, or spec found; the historical AdStation /
+  Publisher Platform REST API is attested only in third-party write-ups and is not recoverable'
+x-probe:
+  date: '2026-07-20'
+  method: probed
+  hosts_resolving: []
+  hosts_nxdomain:
+  - adknowledge.com
+  - www.adknowledge.com
+  - api.adknowledge.com
+  - developer.adknowledge.com
+  - developers.adknowledge.com
+  - docs.adknowledge.com
+  - publisher.adknowledge.com
+  zone:
+    registered: true
+    nameservers: awsdns (Route 53)
+    mx: adknowledge-com.mail.protection.outlook.com
+    spf: true
+    dmarc: false
+    dnssec: false
+    caa: false
+  github_org: 'none (github.com/adknowledgeportal is the unrelated Alzheimer''s Disease Knowledge Portal)'
 tags:
 - Company
 - Consumer
+- Advertising
+- Marketing
+- AdTech
+- Email
+- Publishers
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
